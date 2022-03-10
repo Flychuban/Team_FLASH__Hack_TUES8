@@ -2,7 +2,9 @@
     width: 1000px;
     height: 700px;
     border: 2px solid black;
-    margin: auto;
+    position: absolute;
+    left: 450px;
+    top: 90px;
     background-image: url("https://cdn2.vectorstock.com/i/1000x1000/51/06/cartoon-space-landscape-cosmic-planet-surface-vector-34695106.jpg");
     background-size: cover;
 }
