@@ -8,3 +8,10 @@
     background-image: url("https://cdn2.vectorstock.com/i/1000x1000/51/06/cartoon-space-landscape-cosmic-planet-surface-vector-34695106.jpg");
     background-size: cover;
 }
+
+.robot {
+    width: 5%;
+    height: 5%;
+    position: relative;
+    background-image: url("https://media.discordapp.net/attachments/950657961657778216/950665662223749160/fdAsset_5.png");
+}
