@@ -9,12 +9,12 @@
     background-size: cover;
 }
 
-.start_message{
-    position:absolute;
-    font-size:5vmin;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+.start_message {
+    position: absolute;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
 }
 
@@ -22,9 +22,28 @@
     width: 10%;
     height: 15%;
     position: relative;
-    background-color: red;
+    background-image: url("https://media.discordapp.net/attachments/950657961657778216/950665662223749160/fdAsset_5.png");
+    background-size: cover;
+    top: 73%;
+    left: 24%;
 }
 
-.hide{
-    display:none;
+.robotjump {
+    animation: robotjump 0.5s linear;
+}
+
+@keyframes robotjump {
+    0% {
+        top: 73%;
+    }
+    50% {
+        top: 60%;
+    }
+    100% {
+        top: 73%;
+    }
+}
+
+.hide {
+    display: none;
 }
