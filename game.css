@@ -9,9 +9,22 @@
     background-size: cover;
 }
 
+.start_message{
+    position:absolute;
+    font-size:5vmin;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color: white;
+}
+
 .robot {
     width: 10%;
     height: 15%;
     position: relative;
     background-color: red;
+}
+
+.hide{
+    display:none;
 }
