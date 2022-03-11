@@ -80,12 +80,12 @@ document.addEventListener("mousedown", () => {
     object.classList.add("object_move");
 });
 
-window.setInterval( () => {
+window.setInterval(() => {
     var robotTop = parseInt(window.getComputedStyle(robot).getPropertyValue("top"));
     var objectLeft = parseInt(window.getComputedStyle(object).getPropertyValue("left"));
     var object2Left = parseInt(window.getComputedStyle(object2).getPropertyValue("left"));
 
-    if ((objectLeft < 330 && objectLeft > 170) && robotTop > 440) alert("hello");
-    if ((object2Left < 330 && object2Left > 170) && robotTop > 440) alert("hello");
+    if ((objectLeft < 33 + "%" && objectLeft > 17 + "%") && robotTop > 0 + "%") alert("hello");
+    if ((object2Left < 33 + "%" && object2Left > 17 + "%") && robotTop > 0 + "%") alert("hello");
 
 }, 50);
