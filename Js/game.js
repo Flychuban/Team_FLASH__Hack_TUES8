@@ -1,7 +1,11 @@
 const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
+
 let score = 0;
 var ok = 0;
+var ok_2 = 0;
+var time = 3;
+var timing = document.documentElement;
 
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
