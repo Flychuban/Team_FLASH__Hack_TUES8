@@ -1,7 +1,6 @@
 const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
 
-
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
@@ -10,6 +9,7 @@ var timing = document.documentElement;
 
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
+var object2 = document.getElementById("object2");
 
 document.addEventListener("mousedown", function(event) {
     remove();
@@ -33,8 +33,17 @@ function updatescore() {
         scoreElem.textContent = Math.floor(score);
         updatescore();
     }, 500);
-
 }
+
+window.setInterval( () => {
+    if (score <= 20) {
+        object2.classList.add("hide");
+    }
+    else {
+        object2.classList.remove("hide");
+        object2.classList.add("object2_move");
+    }
+}, 1)
 
 document.addEventListener("mousedown", (e) => {
     e = e || window.event;
