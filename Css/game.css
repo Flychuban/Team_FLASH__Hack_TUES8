@@ -28,6 +28,13 @@
     left: 24%;
 }
 
+#object {
+    width: 9%;
+    height: 12%;
+    position: relative;
+    background-color: brown;
+}
+
 .robot_jump {
     animation: robotjump 0.5s linear;
 }
