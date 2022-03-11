@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Space Traveler</title>
     <style>
-      .bottom {
-        background-color: aliceblue;
-        border-radius: 10px;
+      .buttom {
         border: none;
         padding-bottom: 12px;
-        padding-left: 10px;
-        padding-right: 10px;
       }
 
       body {
@@ -23,20 +19,58 @@
         background-size: cover;
       }
 
-      .sidenav {
-        height: 92%;
-        width: 15%;
-        position: fixed;
-        z-index: 1;
-        bottom: 0;
-        right: 0;
-        background-color: aliceblue;
-        overflow: hidden;
-      }
-
       .condent {
         margin-left: 200px;
         padding-left: 20px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: medium;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        font-size: medium;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: aliceblue;
+      }
+
+      text {
+        font-family: courier;
+        text-align: center;
+        background-color: aliceblue;
+        border: none;
+        width: 100px;
+        padding: 10px;
+        top: 50px;
+        position: static;
+      }
+
+      .playB {
       }
     </style>
   </head>
@@ -47,28 +81,25 @@
         text-align: center;
         background-color: aliceblue;
         border-radius: 10px;
-        width: 40%;
+        display: flex;
         padding: 10px;
+        top: 10px;
+        right: 30px;
       "
     >
-      Space Traveler
-    </h1>
-    <botton
-      class="botton"
-      style="
-        font-family: courier;
-        text-align: center;
-        background-color: aliceblue;
-        border-radius: 10px;
-        width: 400px;
-        padding: 10px;
-      "
-    >
-      Play
-    </botton>
+      Space Traveler |
+      <div class="playB" style="border: none; padding-bottom: 12px">
+        <button class="text">Play</button>
+      </div>
 
-    <div class="sidenav">
-      <a href="https://solarsystem.nasa.gov/planets/overview/">Planets</a>
-    </div>
+      <div class="dropdown">
+        <button class="text">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </h1>
   </body>
 </html>
