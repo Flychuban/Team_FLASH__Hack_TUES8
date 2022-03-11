@@ -46,4 +46,4 @@ function jump() {
 
 document.addEventListener("keydown", () => {
     object.classList.add("object_move");
-})
+});
