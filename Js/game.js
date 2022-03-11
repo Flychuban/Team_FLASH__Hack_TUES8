@@ -1,6 +1,7 @@
 const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
 let score = 0;
+var ok = 0;
 
 var robot = document.getElementById("robot");
 
@@ -9,7 +10,10 @@ document.addEventListener("keydown", function(event) {
 });
 
 document.addEventListener("keydown", function(event) {
-    updatescore();
+    if (ok == 0) {
+        updatescore();
+        ok = 1;
+    }
 });
 
 function remove() {
