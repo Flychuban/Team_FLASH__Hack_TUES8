@@ -79,6 +79,21 @@
       .playB {
         border: none;
       }
+
+      .center {
+        margin: auto;
+        width: 50%;
+        border: none;
+        padding: 10px;
+      }
+
+      .right {
+        position: absolute;
+        right: 0px;
+        width: 100px;
+        border: none;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
@@ -113,7 +128,9 @@
       <p></p>
 
       <div class="dropdown">
-        <button class="text">More</button>
+        <button class="right" style="background-color: lightblue; border: none">
+          More
+        </button>
         <div class="dropdown-content">
           <a href="mailto:kaloanas07@gmail.com"> Text us </a>
           <a href="#">Story about our game</a>
@@ -133,6 +150,7 @@
     </h1>
 
     <h2
+      class="center"
       style="
         background-color: lightblue;
         width: 290px;
@@ -143,13 +161,16 @@
     >
       Story about our game
     </h2>
+    <p></p>
     <p
+      class="center"
       style="
         background-color: lightblue;
         width: 80%;
         border-radius: 10px;
         padding: 10px;
         font-family: courier;
+        text-align: center;
       "
     >
       Животът на Земята бил прекрасен. Всички живеели щастливо. Един ден хората
