@@ -35,11 +35,10 @@ function updatescore() {
     }, 500);
 }
 
-window.setInterval( () => {
+window.setInterval(() => {
     if (score <= 10) {
         object2.classList.add("hide");
-    }
-    else {
+    } else {
         object2.classList.add("object2_move");
         object2.classList.remove("hide");
     }
@@ -48,8 +47,12 @@ window.setInterval( () => {
 document.addEventListener("mousedown", (e) => {
     e = e || window.event;
     switch (e.which) {
-      case 1: normal_jump(); break;
-      case 3: double_jump(); break; 
+        case 1:
+            normal_jump();
+            break;
+        case 3:
+            double_jump();
+            break;
     }
 });
 
