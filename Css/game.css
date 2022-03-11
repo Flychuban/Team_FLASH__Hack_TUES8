@@ -39,7 +39,7 @@
 }
 
 .object_move {
-    animation: object_move 2s infinite linear;
+    animation: object_move var(--animationTime) infinite linear;
 }
 
 @keyframes object_move {
