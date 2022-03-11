@@ -72,7 +72,7 @@ function double_jump() {
         robot.classList.add("robot_double_jump");
         setTimeout(() => {
             robot.classList.remove("robot_double_jump");
-        }, 700);
+        }, 800);
     }
 }
 

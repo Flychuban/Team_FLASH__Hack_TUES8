@@ -92,7 +92,7 @@
 }
 
 .robot_double_jump {
-    animation: robot_doublejump 0.7s linear;
+    animation: robot_doublejump 0.8s linear;
 }
 
 @keyframes robotjump {
