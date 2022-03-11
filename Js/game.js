@@ -36,12 +36,12 @@ function updatescore() {
 }
 
 window.setInterval( () => {
-    if (score <= 20) {
+    if (score <= 10) {
         object2.classList.add("hide");
     }
     else {
-        object2.classList.remove("hide");
         object2.classList.add("object2_move");
+        object2.classList.remove("hide");
     }
 }, 1)
 

@@ -42,19 +42,19 @@
     width: 12%;
     height: 16%;
     position: relative;
-    top: 65%;
-    left: 100%;
+    top: 30%;
+    left: 91%;
     background-image: url(/images/object.png);
     background-size: cover;
+    animation: object2_move 3s infinite linear;
 }
-
 
 .object_move {
     animation: object_move 2s infinite linear;
 }
 
-.object2_move{
-    animation: object_move 3s infinite linear;
+.object2_move {
+    animation: object2_move 4s infinite linear;
 }
 
 @keyframes object_move {
@@ -74,20 +74,16 @@
 
 @keyframes object2_move {
     0% {
-        left: 100%;
-        top: 65%;
+        left: 91%;
+        top: 49%;
     }
-    10% {
-        left: 88%;
-        top: 65%;
-    }
-    45% {
-       left:44%;
-       top:54%; 
+    50% {
+        left: 45.5%;
+        top: 39%;
     }
     100% {
         left: -12%;
-        top: 68%;
+        top: 51%;
     }
 }
 
