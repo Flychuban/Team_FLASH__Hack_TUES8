@@ -35,11 +35,10 @@ function updatescore() {
     }, 500);
 }
 
-window.setInterval( () => {
+window.setInterval(() => {
     if (score <= 10) {
         object2.classList.add("hide");
-    }
-    else {
+    } else {
         object2.classList.add("object2_move");
         object2.classList.remove("hide");
     }
@@ -48,8 +47,12 @@ window.setInterval( () => {
 document.addEventListener("mousedown", (e) => {
     e = e || window.event;
     switch (e.which) {
-      case 1: normal_jump(); break;
-      case 3: double_jump(); break; 
+        case 1:
+            normal_jump();
+            break;
+        case 3:
+            double_jump();
+            break;
     }
 });
 
@@ -76,3 +79,13 @@ function double_jump() {
 document.addEventListener("mousedown", () => {
     object.classList.add("object_move");
 });
+
+window.setInterval( () => {
+    var robotTop = parseInt(window.getComputedStyle(robot).getPropertyValue("top"));
+    var objectLeft = parseInt(window.getComputedStyle(object).getPropertyValue("left"));
+    var object2Left = parseInt(window.getComputedStyle(object2).getPropertyValue("left"));
+
+    if ((objectLeft < 330 && objectLeft > 170) && robotTop > 440) alert("hello");
+    if ((object2Left < 330 && object2Left > 170) && robotTop > 440) alert("hello");
+
+}, 50);
