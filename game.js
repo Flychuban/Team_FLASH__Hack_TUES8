@@ -1,13 +1,26 @@
 const statrElem=document.querySelector("[data-start-screen]");
+const scoreElem=document.querySelector("[data-score]");
+let score=0;
+
 var robot = document.getElementById("robot");
 
 document.addEventListener("keydown",function(event){
     remove();
 });
 
+updatescore();
+
 function remove(){
     statrElem.classList.add("hide"); 
 }
+
+function updatescore(){
+    
+    setTimeout( () => {
+        score=score+1;
+        scoreElem.textContent=Math.floor(score);
+    }, 1000);
+} 
 
 document.addEventListener("keydown", () => {
     jump();
