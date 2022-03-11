@@ -87,5 +87,4 @@ window.setInterval( () => {
 
     if ((objectLeft < 330 && objectLeft > 170) && robotTop > 440) alert("hello");
     if ((object2Left < 330 && object2Left > 170) && robotTop > 440) alert("hello");
-
 }, 50);
