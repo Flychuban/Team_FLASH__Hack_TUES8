@@ -1,36 +1,37 @@
-const statrElem=document.querySelector("[data-start-screen]");
-const scoreElem=document.querySelector("[data-score]");
-let score=0;
+const statrElem = document.querySelector("[data-start-screen]");
+const scoreElem = document.querySelector("[data-score]");
+let score = 0;
 
 var robot = document.getElementById("robot");
 
-document.addEventListener("keydown",function(event){
+document.addEventListener("keydown", function(event) {
     remove();
 });
 
 updatescore();
 
-function remove(){
-    statrElem.classList.add("hide"); 
+function remove() {
+    statrElem.classList.add("hide");
 }
 
-function updatescore(){
-    
-    setTimeout( () => {
-        score=score+1;
-        scoreElem.textContent=Math.floor(score);
-    }, 1000);
-} 
+function updatescore() {
+
+    setTimeout(() => {
+        score = score + 1;
+        scoreElem.textContent = Math.floor(score);
+        updatescore();
+    }, 500);
+
+}
 
 document.addEventListener("keydown", () => {
     jump();
 });
 
 function jump() {
-    if (robot.classList != "robot_jump")
-    {
+    if (robot.classList != "robot_jump") {
         robot.classList.add("robot_jump");
-        setTimeout( () => {
+        setTimeout(() => {
             robot.classList.remove("robot_jump");
         }, 500);
     }
