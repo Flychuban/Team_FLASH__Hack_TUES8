@@ -8,7 +8,9 @@ document.addEventListener("keydown", function(event) {
     remove();
 });
 
-updatescore();
+document.addEventListener("keydown", function(event) {
+    updatescore();
+});
 
 function remove() {
     statrElem.classList.add("hide");
