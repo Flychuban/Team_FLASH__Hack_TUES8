@@ -1,6 +1,7 @@
 const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
 
+
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
