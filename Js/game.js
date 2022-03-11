@@ -4,6 +4,7 @@ let score = 0;
 var ok = 0;
 
 var robot = document.getElementById("robot");
+var object = document.getElementById("object");
 
 document.addEventListener("keydown", function(event) {
     remove();
@@ -42,3 +43,7 @@ function jump() {
         }, 500);
     }
 }
+
+document.addEventListener("keydown", () => {
+    object.classList.add("object_move");
+})
