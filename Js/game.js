@@ -10,11 +10,11 @@ var timing = document.documentElement;
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("mousedown", function(event) {
     remove();
 });
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("mousedown", function(event) {
     if (ok == 0) {
         updatescore();
         ok = 1;
@@ -35,11 +35,17 @@ function updatescore() {
 
 }
 
-document.addEventListener("keydown", () => {
-    jump();
+document.addEventListener("mousedown", (e) => {
+    e = e || window.event;
+    switch (e.which) {
+      case 1: normal_jump(); break;
+      case 3: double_jump(); break; 
+    }
 });
 
-function jump() {
+window.addEventListener("contextmenu", (e) => e.preventDefault());
+
+function normal_jump() {
     if (robot.classList != "robot_jump") {
         robot.classList.add("robot_jump");
         setTimeout(() => {
@@ -48,6 +54,15 @@ function jump() {
     }
 }
 
-document.addEventListener("keydown", () => {
+function double_jump() {
+    if (robot.classList != "robot_double_jump") {
+        robot.classList.add("robot_double_jump");
+        setTimeout(() => {
+            robot.classList.remove("robot_double_jump");
+        }, 700);
+    }
+}
+
+document.addEventListener("mousedown", () => {
     object.classList.add("object_move");
 });
