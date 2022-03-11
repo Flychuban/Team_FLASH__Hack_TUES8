@@ -24,17 +24,37 @@
     position: relative;
     background-image: url("https://media.discordapp.net/attachments/950657961657778216/950665662223749160/fdAsset_5.png");
     background-size: cover;
-    top: 73%;
+    top: 71%;
     left: 24%;
 }
 
 #object {
-    width: 9%;
-    height: 12%;
+    width: 12%;
+    height: 16%;
     position: relative;
     top: 65%;
     left: 91%;
-    background-color: brown;
+    background-image: url(/images/object.png);
+    background-size: cover;
+}
+
+.object_move {
+    animation: object_move 2s infinite linear;
+}
+
+@keyframes object_move {
+    0% {
+        left: 91%;
+        top: 65%;
+    }
+    50% {
+        left: 45.5%;
+        top: 55%;
+    }
+    100% {
+        left: -12%;
+        top: 68%;
+    }
 }
 
 .robot_jump {
