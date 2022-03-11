@@ -80,7 +80,7 @@ document.addEventListener("mousedown", () => {
     object.classList.add("object_move");
 });
 
-window.setInterval(() => {
+window.setInterval( () => {
     var robotTop = parseInt(window.getComputedStyle(robot).getPropertyValue("top"));
     var objectLeft = parseInt(window.getComputedStyle(object).getPropertyValue("left"));
     var object2Left = parseInt(window.getComputedStyle(object2).getPropertyValue("left"));
