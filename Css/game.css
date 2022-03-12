@@ -1,7 +1,8 @@
-*,*::before,*::after {
- user-select: none;
+*,
+*::before,
+*::after {
+    user-select: none;
 }
-
 
 .screen {
     width: 52%;
@@ -32,14 +33,15 @@
     color: white;
 }
 
-#star{
+#star {
     width: 5%;
     height: 7.5%;
     position: absolute;
-    top: 45%;
-    left: 95%;
+    top: 50%;
+    left: 700%;
     background-image: url("/images/star_1233.png");
-    background-size: cover; 
+    background-size: cover;
+    animation: star_move 13s infinite linear;
 }
 
 #reset_button {
@@ -90,10 +92,6 @@
     animation: object2_move 3s infinite linear;
 }
 
-.star_move{
-    animation: star_move 2.8s infinite linear;
-}
-
 @keyframes object_move {
     0% {
         left: 91%;
@@ -126,9 +124,8 @@
 
 @keyframes star_move {
     0% {
-        left: 95%;
+        left: 700%;
     }
-
     100% {
         left: -5%;
     }
@@ -140,6 +137,10 @@
 
 .robot_double_jump {
     animation: robot_doublejump 1s linear;
+}
+
+.star_move {
+    animation: star_move 14s infinite linear;
 }
 
 @keyframes robotjump {

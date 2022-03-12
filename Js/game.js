@@ -2,6 +2,7 @@ const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
 const endElem = document.querySelector("[data-end-screen]");
 
+var star = document.getElementById("star");
 var isGameOver = false;
 let score = 0;
 var ok = 0;
@@ -10,7 +11,7 @@ var jump_audio = new Audio("/images/jump_audio_trimed.mp3");
 var game_over = new Audio("/images/gameover_sound_trimed.mp3");
 
 var robot = document.getElementById("robot");
-var object = document.getElementById("object");
+var star = document.getElementById("object");
 var object2 = document.getElementById("object2");
 var reset_button = document.getElementById("reset_button");
 
@@ -43,8 +44,7 @@ window.setInterval(() => {
     if (isGameOver == false) {
         if (score <= 20) {
             object2.classList.add("hide");
-        } 
-        else {
+        } else {
             object2.classList.add("object2_move");
             object2.classList.remove("hide");
         }
@@ -150,9 +150,26 @@ window.setInterval(() => {
         object.classList.add("hide");
         object2.classList.add("hide");
     }
+
+    if (collisionStar(robot, star) == true) {
+        score = score + 10;
+        star.classList.add("hide");
+    }
 }, 50);
 
 window.addEventListener("load", () => {
     endElem.classList.add("hide");
     reset_button.classList.add("hide");
 });
+
+function collisionStar(robot, star) {
+    var robotPos = robot.getBoundingClientRect();
+    var starPos = star.getBoundingClientRect();
+
+    return !(
+        ((robotPos.top + robotPos.height) < (starPos.top)) ||
+        (robotPos.top > (starPos.top + starPos.height)) ||
+        ((robotPos.left + robotPos.width) < starPos.left) ||
+        (robotPos.left > (starPos.left + starPos.width))
+    );
+}
