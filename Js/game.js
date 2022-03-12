@@ -82,7 +82,7 @@ function double_jump() {
         robot.classList.add("robot_double_jump");
         setTimeout(() => {
             robot.classList.remove("robot_double_jump");
-        }, 800);
+        }, 900);
     }
 }
 
@@ -102,7 +102,7 @@ window.setInterval(() => {
 
     if (object2Left < 0) object2.classList.add("hide");
     setTimeout(() => {
-        if (isGameOver == false && score > 30)
+        if (isGameOver == false && score > 20)
             object2.classList.remove("hide");
     }, 350);
 
