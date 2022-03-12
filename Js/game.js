@@ -43,7 +43,8 @@ window.setInterval(() => {
     if (isGameOver == false) {
         if (score <= 20) {
             object2.classList.add("hide");
-        } else {
+        } 
+        else {
             object2.classList.add("object2_move");
             object2.classList.remove("hide");
         }
