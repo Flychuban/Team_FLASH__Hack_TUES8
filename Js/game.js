@@ -6,8 +6,6 @@ var isGameOver = false;
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
-var time = 3;
-var timing = document.documentElement;
 
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
