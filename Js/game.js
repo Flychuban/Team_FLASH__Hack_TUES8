@@ -80,15 +80,6 @@ document.addEventListener("mousedown", () => {
     object.classList.add("object_move");
 });
 
-/*window.setInterval( () => {
-    var robotTop = parseInt(window.getComputedStyle(robot).getPropertyValue("top"));
-    var objectLeft = parseInt(window.getComputedStyle(object).getPropertyValue("left"));
-    var object2Left = parseInt(window.getComputedStyle(object2).getPropertyValue("left"));
-
-    if ((objectLeft < 330 && objectLeft > 170) && robotTop > 440) alert("hello");
-    if ((object2Left < 330 && object2Left > 170) && robotTop > 440) alert("hello");
-}, 50);*/
-
 function collision(robot, object) {
     var robotPos = robot.getBoundingClientRect();
     var objectPos = object.getBoundingClientRect();
@@ -101,6 +92,19 @@ function collision(robot, object) {
     );
 }
 
+function collision2(robot, object2) {
+    var robotPos = robot.getBoundingClientRect();
+    var object2Pos = object2.getBoundingClientRect();
+
+    return !(
+        ((robotPos.top + robotPos.height) < (object2Pos.top)) ||
+        (robotPos.top > (object2Pos.top + object2Pos.height)) ||
+        ((robotPos.left + robotPos.width) < object2Pos.left) ||
+        (robotPos.left > (object2Pos.left + object2Pos.width))
+    );
+}
+
 window.setInterval( () => {
     if (collision(robot, object) == true) alert("colision");
+    if (collision2(robot, object2) == true) alert("colision");
 }, 50);
