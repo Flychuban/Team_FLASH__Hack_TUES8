@@ -7,6 +7,7 @@ let score = 0;
 var ok = 0;
 var ok_2 = 0;
 var jump_audio = new Audio("/images/jump_audio_trimed.mp3");
+var game_over= new Audio("/images/gameover_sound_trimed.mp3");
 
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
@@ -135,6 +136,7 @@ function collision2(robot, object2) {
 window.setInterval(() => {
     if (collision(robot, object) == true) {
         isGameOver = true;
+        game_over.play();
         reset_button.classList.remove("hide");
         endElem.classList.remove("hide");
         object.classList.add("hide");
@@ -142,6 +144,7 @@ window.setInterval(() => {
     }
     if (collision2(robot, object2) == true) {
         isGameOver = true;
+        game_over.play();
         reset_button.classList.remove("hide");
         endElem.classList.remove("hide");
         object.classList.add("hide");
