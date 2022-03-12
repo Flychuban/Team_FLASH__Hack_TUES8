@@ -27,6 +27,16 @@
     color: white;
 }
 
+#reset_button {
+    position: absolute;
+    font-size: 3vmin;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    font-weight: bold;
+}
+
 #robot {
     width: 10%;
     height: 15%;
