@@ -106,11 +106,11 @@
 }
 
 .robot_jump {
-    animation: robotjump 0.6s linear;
+    animation: robotjump 0.65s linear;
 }
 
 .robot_double_jump {
-    animation: robot_doublejump 0.8s linear;
+    animation: robot_doublejump 0.87s linear;
 }
 
 @keyframes robotjump {
@@ -118,7 +118,7 @@
         top: 73%;
     }
     50% {
-        top: 50%;
+        top: 48%;
     }
     100% {
         top: 73%;
