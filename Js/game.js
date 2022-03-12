@@ -7,7 +7,7 @@ let score = 0;
 var ok = 0;
 var ok_2 = 0;
 var jump_audio = new Audio("/images/jump_audio_trimed.mp3");
-var game_over= new Audio("/images/gameover_sound_trimed.mp3");
+var game_over = new Audio("/images/gameover_sound_trimed.mp3");
 
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
@@ -41,10 +41,9 @@ function updatescore() {
 
 window.setInterval(() => {
     if (isGameOver == false) {
-        if (score <= 30) {
+        if (score <= 20) {
             object2.classList.add("hide");
-        }
-        else {
+        } else {
             object2.classList.add("object2_move");
             object2.classList.remove("hide");
         }
@@ -91,18 +90,18 @@ document.addEventListener("mousedown", () => {
     object.classList.add("object_move");
 });
 
-window.setInterval( () => {
+window.setInterval(() => {
     objectLeft = parseInt(getComputedStyle(object).getPropertyValue("left"));
     object2Left = parseInt(getComputedStyle(object2).getPropertyValue("left"));
 
     if (objectLeft < 0) object.classList.add("hide");
-    setTimeout( () => {
+    setTimeout(() => {
         if (isGameOver == false)
             object.classList.remove("hide");
     }, 350);
 
     if (object2Left < 0) object2.classList.add("hide");
-    setTimeout( () => {
+    setTimeout(() => {
         if (isGameOver == false && score > 30)
             object2.classList.remove("hide");
     }, 350);
