@@ -103,7 +103,7 @@ window.setInterval( () => {
 
     if (object2Left < 0) object2.classList.add("hide");
     setTimeout( () => {
-        if (isGameOver == false && score >= 30)
+        if (isGameOver == false && score > 30)
             object2.classList.remove("hide");
     }, 350);
 
