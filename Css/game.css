@@ -68,11 +68,11 @@
 }
 
 .object_move {
-    animation: object_move 1.9s infinite linear;
+    animation: object_move 1.8s infinite linear;
 }
 
 .object2_move {
-    animation: object2_move 3s infinite linear;
+    animation: object2_move 3.1s infinite linear;
 }
 
 @keyframes object_move {
