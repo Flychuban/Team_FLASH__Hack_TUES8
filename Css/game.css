@@ -72,7 +72,7 @@
 }
 
 .object2_move {
-    animation: object2_move 3.1s infinite linear;
+    animation: object2_move 3s infinite linear;
 }
 
 @keyframes object_move {
@@ -106,11 +106,11 @@
 }
 
 .robot_jump {
-    animation: robotjump 0.65s linear;
+    animation: robotjump 0.6s linear;
 }
 
 .robot_double_jump {
-    animation: robot_doublejump 0.87s linear;
+    animation: robot_doublejump 0.9s linear;
 }
 
 @keyframes robotjump {
