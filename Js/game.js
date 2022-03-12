@@ -6,6 +6,7 @@ var isGameOver = false;
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
+var jump_audio = new Audio("/images/jump_audio_trimed.mp3");
 
 var robot = document.getElementById("robot");
 var object = document.getElementById("object");
@@ -55,9 +56,11 @@ document.addEventListener("mousedown", (e) => {
         switch (e.which) {
             case 1:
                 normal_jump();
+                jump_audio.play();
                 break;
             case 3:
                 double_jump();
+                jump_audio.play();
                 break;
         }
     }
