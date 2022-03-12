@@ -36,7 +36,7 @@ function updatescore() {
 }
 
 window.setInterval(() => {
-    if (score <= 10) {
+    if (score <= 30) {
         object2.classList.add("hide");
     } else {
         object2.classList.add("object2_move");
