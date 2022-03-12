@@ -28,7 +28,6 @@ function remove() {
 }
 
 function updatescore() {
-
     setTimeout(() => {
         score = score + 1;
         scoreElem.textContent = Math.floor(score);
@@ -39,11 +38,12 @@ function updatescore() {
 window.setInterval(() => {
     if (score <= 30) {
         object2.classList.add("hide");
-    } else {
+    } 
+    else {
         object2.classList.add("object2_move");
         object2.classList.remove("hide");
     }
-}, 1)
+}, 1);
 
 document.addEventListener("mousedown", (e) => {
     e = e || window.event;
@@ -106,12 +106,15 @@ function collision2(robot, object2) {
 }
 
 window.setInterval( () => {
-    if (collision(robot, object) == true)
-    {
+    if (collision(robot, object) == true) {
         endElem.classList.remove("hide");
+        object.classList.add("hide");
+        object2.classList.add("hide");
     }
     if (collision2(robot, object2) == true){
         endElem.classList.remove("hide");
+        object.classList.add("hide");
+        object2.classList.add("hide");
     }
 }, 50);
 
