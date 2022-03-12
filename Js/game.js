@@ -1,5 +1,6 @@
 const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
+const endElem = document.querySelector("[data-end-screen]");
 
 let score = 0;
 var ok = 0;
@@ -105,6 +106,15 @@ function collision2(robot, object2) {
 }
 
 window.setInterval( () => {
-    if (collision(robot, object) == true) alert("colision");
-    if (collision2(robot, object2) == true) alert("colision");
+    if (collision(robot, object) == true)
+    {
+        endElem.classList.remove("hide");
+    }
+    if (collision2(robot, object2) == true){
+        endElem.classList.remove("hide");
+    }
 }, 50);
+
+window.addEventListener("load", function(event) {
+    endElem.classList.add("hide");
+});

@@ -18,6 +18,15 @@
     color: white;
 }
 
+.end-screen {
+    position: absolute;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
 #robot {
     width: 10%;
     height: 15%;
