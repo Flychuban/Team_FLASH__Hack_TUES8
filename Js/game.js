@@ -2,16 +2,16 @@ const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
 const endElem = document.querySelector("[data-end-screen]");
 
-var star = document.getElementById("star");
 var isGameOver = false;
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
+var ok_star = 0;
 var jump_audio = new Audio("/images/jump_audio_trimed.mp3");
 var game_over = new Audio("/images/gameover_sound_trimed.mp3");
 
 var robot = document.getElementById("robot");
-var star = document.getElementById("object");
+var star = document.getElementById("star");
 var object2 = document.getElementById("object2");
 var reset_button = document.getElementById("reset_button");
 

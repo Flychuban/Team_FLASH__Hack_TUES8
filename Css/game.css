@@ -38,10 +38,9 @@
     height: 7.5%;
     position: absolute;
     top: 50%;
-    left: 700%;
+    left: 550%;
     background-image: url("/images/star_1233.png");
     background-size: cover;
-    animation: star_move 13s infinite linear;
 }
 
 #reset_button {
@@ -92,6 +91,10 @@
     animation: object2_move 3s infinite linear;
 }
 
+.star_move {
+    animation: star_move 11s infinite linear;
+}
+
 @keyframes object_move {
     0% {
         left: 91%;
@@ -124,7 +127,7 @@
 
 @keyframes star_move {
     0% {
-        left: 700%;
+        left: 550%;
     }
     100% {
         left: -5%;
@@ -137,10 +140,6 @@
 
 .robot_double_jump {
     animation: robot_doublejump 1s linear;
-}
-
-.star_move {
-    animation: star_move 14s infinite linear;
 }
 
 @keyframes robotjump {
