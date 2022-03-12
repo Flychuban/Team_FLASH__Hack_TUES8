@@ -48,7 +48,7 @@ window.setInterval(() => {
             object2.classList.remove("hide");
         }
     }
-}, 1);
+}, 50);
 
 document.addEventListener("mousedown", (e) => {
     if (isGameOver == false) {
