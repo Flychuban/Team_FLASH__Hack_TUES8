@@ -2,6 +2,7 @@ const statrElem = document.querySelector("[data-start-screen]");
 const scoreElem = document.querySelector("[data-score]");
 const endElem = document.querySelector("[data-end-screen]");
 
+var isGameOver = false;
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
@@ -29,19 +30,22 @@ function remove() {
 
 function updatescore() {
     setTimeout(() => {
-        score = score + 1;
-        scoreElem.textContent = Math.floor(score);
-        updatescore();
+        if (isGameOver == false) {
+            score = score + 1;
+            scoreElem.textContent = Math.floor(score);
+            updatescore();
+        }
     }, 500);
 }
 
 window.setInterval(() => {
-    if (score <= 30) {
-        object2.classList.add("hide");
-    } 
-    else {
-        object2.classList.add("object2_move");
-        object2.classList.remove("hide");
+    if (isGameOver == false) {
+        if (score <= 30) {
+            object2.classList.add("hide");
+        } else {
+            object2.classList.add("object2_move");
+            object2.classList.remove("hide");
+        }
     }
 }, 1);
 
@@ -105,13 +109,15 @@ function collision2(robot, object2) {
     );
 }
 
-window.setInterval( () => {
+window.setInterval(() => {
     if (collision(robot, object) == true) {
+        isGameOver = true;
         endElem.classList.remove("hide");
         object.classList.add("hide");
         object2.classList.add("hide");
     }
-    if (collision2(robot, object2) == true){
+    if (collision2(robot, object2) == true) {
+        isGameOver = true;
         endElem.classList.remove("hide");
         object.classList.add("hide");
         object2.classList.add("hide");
