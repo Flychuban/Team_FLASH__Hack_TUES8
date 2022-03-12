@@ -29,66 +29,65 @@
 }
 
 #object {
-    width: 12%;
-    height: 16%;
+    width: 9%;
+    height: 11%;
     position: relative;
-    top: 65%;
+    top: 67%;
     left: 91%;
-    background-image: url(/images/object.png);
+    background-image: url(/images/object_1_2.png);
     background-size: cover;
 }
 
 #object2 {
-    width: 12%;
-    height: 16%;
+    width: 9%;
+    height: 11%;
     position: relative;
-    top: 30%;
+    top: 56%;
     left: 91%;
-    background-image: url(/images/object.png);
+    background-image: url(/images/object_1_2.png);
     background-size: cover;
-    animation: object2_move 3s infinite linear;
 }
 
 .object_move {
-    animation: object_move 2s infinite linear;
+    animation: object_move 1.9s infinite linear;
 }
 
 .object2_move {
-    animation: object2_move 4s infinite linear;
+    animation: object2_move 3s infinite linear;
 }
 
 @keyframes object_move {
     0% {
         left: 91%;
-        top: 65%;
+        top: 67%;
     }
     50% {
         left: 45.5%;
-        top: 55%;
+        top: 59%;
     }
     100% {
         left: -12%;
-        top: 68%;
+        top: 71%;
     }
 }
 
 @keyframes object2_move {
     0% {
         left: 91%;
-        top: 49%;
+        top: 56%;
     }
     50% {
         left: 45.5%;
-        top: 39%;
+        top: 46%;
     }
     100% {
         left: -12%;
-        top: 51%;
+        top: 59%;
     }
 }
 
 .robot_jump {
-    animation: robotjump 0.5s linear;
+    animation: robotjump 0.6s linear;
 }
 
 .robot_double_jump {

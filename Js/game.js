@@ -63,7 +63,7 @@ function normal_jump() {
         robot.classList.add("robot_jump");
         setTimeout(() => {
             robot.classList.remove("robot_jump");
-        }, 500);
+        }, 600);
     }
 }
 
