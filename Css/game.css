@@ -38,7 +38,7 @@
     height: 7.5%;
     position: absolute;
     top: 50%;
-    left: 550%;
+    left: 95%;
     background-image: url("/images/star_1233.png");
     background-size: cover;
 }
@@ -92,7 +92,7 @@
 }
 
 .star_move {
-    animation: star_move 11s infinite linear;
+    animation: star_move 2.5s infinite linear;
 }
 
 @keyframes object_move {
@@ -127,7 +127,7 @@
 
 @keyframes star_move {
     0% {
-        left: 550%;
+        left: 95%;
     }
     100% {
         left: -5%;

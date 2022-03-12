@@ -6,6 +6,7 @@ var isGameOver = false;
 let score = 0;
 var ok = 0;
 var ok_2 = 0;
+var found= 1;
 var ok_star = 0;
 var jump_audio = new Audio("/images/jump_audio_trimed.mp3");
 var game_over = new Audio("/images/gameover_sound_trimed.mp3");
@@ -160,6 +161,7 @@ window.setInterval(() => {
 window.addEventListener("load", () => {
     endElem.classList.add("hide");
     reset_button.classList.add("hide");
+    star.classList.add("hide");
 });
 
 function collisionStar(robot, star) {
@@ -173,3 +175,30 @@ function collisionStar(robot, star) {
         (robotPos.left > (starPos.left + starPos.width))
     );
 }
+
+if(collisionStar(robot, star)==true){
+    star.classList.add("hide");
+}
+
+window.setInterval(() => {
+//if(score>20){    
+document.addEventListener("mousedown", () => {
+    setTimeout(() => {
+       if(found){ 
+        if (star.classList == "hide");
+             star.classList.remove("hide");
+             star.classList.add("star_move"); 
+       }    
+    }, 50);
+ });
+//}
+},50)
+
+window.setInterval(() => {
+
+    starLeft = parseInt(getComputedStyle(star).getPropertyValue("left"));
+if(starLeft<0) star.classList.add("hide");
+
+if(isGameOver==true){star.classList.add("hide");found=0;}
+
+},50);
