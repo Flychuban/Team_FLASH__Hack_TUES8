@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <link rel="stylesheet" href="/Css/game.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
     <style>
-        body {
-            background-image: url(../images/stars4.png);
-            background-size: cover;
-        }
+      body {
+        background-image: url(../images/stars4.png);
+        background-size: cover;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <button>
       <a
-        href="index.html"
+        href="/index.html"
         style="display: inline; padding: 10px; top: 10px; right: 30px"
         >Back</a
       >
     </button>
-    <h2 style="
+    <h2
+      style="
         font-family: courier;
         text-align: center;
         font-size: xx-large;
         margin-top: 0%;
         color: white;
-      ">
-        🌎 Space Traveller 🌎
+      "
+    >
+      🌎 Space Traveller 🌎
     </h2>
     <div class="screen">
-        <div class="score" data-score>0</div>
-        <div class="start_message" data-start-screen style="font-family: courier">
-            Press any mouse
-            <center>key to start...</center>
-        </div>
-        <div class="end-screen" data-end-screen style="font-family: courier">
-            Game over!
-        </div>
-        <button id="reset_button" style="font-family: courier; border: 1px solid black">
+      <div class="score" data-score>0</div>
+      <div class="start_message" data-start-screen style="font-family: courier">
+        Press any mouse
+        <center>key to start...</center>
+      </div>
+      <div class="end-screen" data-end-screen style="font-family: courier">
+        Game over!
+      </div>
+      <button
+        id="reset_button"
+        style="font-family: courier; border: 1px solid black"
+      >
         <a href="/Html/game.html">Play again</a>
       </button>
-        <div id="robot"></div>
-        <div id="object"></div>
-        <div id="object2"></div>
-        <div id="star"></div>
+      <div id="robot"></div>
+      <div id="object"></div>
+      <div id="object2"></div>
+      <div id="star"></div>
     </div>
     <script src="/Js/game.js"></script>
-</body>
-
+  </body>
 </html>
