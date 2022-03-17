@@ -204,5 +204,5 @@ window.setInterval(() => {
         star.classList.add("hide");
         found = 0;
     }
-
+    
 }, 50);
